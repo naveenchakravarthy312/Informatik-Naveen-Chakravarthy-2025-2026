@@ -1,0 +1,58 @@
+body {
+    font-family: Rubik, Constantia;
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+h1 {
+	font-family: Rubik, Constantia;
+    color: #000000;
+}
+
+a:link {
+  color: orange;
+}
+
+a:visited {
+  color: orange;
+}
+
+a:hover {
+  color: red;
+}
+
+a:active {
+  color: blue;
+}
+
+/* Die gesamte Tabelle */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Header und Zellen */
+th, td {
+    border: 1px solid #000; /* Dies erstellt die Trennlinien */
+    padding: 10px;
+    text-align: center;
+}
+
+/* Hintergrund für die Kopfzeile */
+thead {
+    background-color: #ffdfaf;
+}
+
+/* Hervorhebung der Pausen-Zeile */
+td[colspan="5"] {
+    background-color: #d3d3d3;
+}
+
+td[rowspan="7"] {
+    background-color: #d3d3d3;
+}
+
+tbody td:first-child {
+    background-color: #ffdfaf;
+}
