@@ -91,6 +91,3 @@ Gesamt: 40 Punkte
 4. Gestaltung: Welche Farben/Schriften/Layout‑Idee?
 5. Highlight: Ein Element, auf das du besonders stolz bist.
 6. Quellen: Woher sind Texte/Bilder?
-=======
-# Informatik Projekt
->>>>>>> a2926dc0c84dbb5cdfd1a075f67fde4f41381f07
