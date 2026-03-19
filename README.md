@@ -29,14 +29,14 @@ Du erstellst eine eigene kleine Website über einen Ort in deiner Umgebung (z.�
 - kompletter Projektordner
 - Startseite heißt `index.html`
 - Quellen/Lizenzen in `quellen.html` oder im Footer
-- Abgabe bis Fr, 27.03.2026
+- Abgabe bis Do, 23.04.2026
 - Kurzvorstellung in der Stunde davor (2–3 Minuten)
 - Erweiterungen sind erlaubt (z. B. zusätzliche Seiten), dürfen aber die Mindestanforderungen nicht ersetzen.
 
 ### Meilensteine (empfohlen)
-- Konzept/Struktur bis Mo, 16.02.2026
-- Rohfassung mit 3 Seiten bis Mo, 09.03.2026
-- Finalisierung bis Do, 26.03.2026
+- Konzept/Struktur bis Mo, 05.03.2026
+- Rohfassung mit 3 Seiten bis Mo, 26.03.2026
+- Finalisierung bis Do, 23.04.2026
 
 ### Abgabeformat
 - Projektordner als ZIP abgeben
