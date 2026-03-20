@@ -46,11 +46,23 @@
             width: 100%;
             background-color: white;
         }
+        #Image {
+            position: relative;
+            display: inline-block;
+        }
+        #Label {
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+            background: #e00;
+            color: white;
+            padding: 8px 16px;
+            font-size: 5vw;
+        }
 	  </style>
 
   </head>
 
-    
     <body>
         <div id="Scroll">Textverarbeitung</div>
         <div class="Hauptdiv">
@@ -113,7 +125,10 @@
                 sit amet commodo magna eros quis urna
             </p>
 
-            <img src="Word-screenshot.png" alt="Logo" title="Yahoo" height="auto" width="100%">
+            <div id="Image">
+                <img src="Word-screenshot.png" alt="Logo" title="Yahoo" height="auto" width="100%">
+                <div id="Label">Screenshot Word</div>
+            </div>
                 
             <p id="abs3" class="absatz">
                 Die Design- und die Schnellformatvorlagen-Kataloge stellen beide Befehle zum Zurücksetzen bereit, 
