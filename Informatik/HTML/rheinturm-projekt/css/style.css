@@ -1,5 +1,27 @@
-.button-menu {
-    background: linear-gradient(to right, black, #2c2c2c, #afafaf);
+#button-menu1 {
+    background: linear-gradient(to right, #C0392B, #808080, #ffffff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+    border-radius: 5px;
+    left: 50%;
+    position: scroll;
+}
+#button-menu2 {
+    background: linear-gradient(to right, rgb(0, 0, 0), #C0392B, #ffffff);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    margin: 4px 2px;
+    text-align: center;
+    border-radius: 5px;
+    left: 50%;
+    position: scroll;
+}
+#button-menu3 {
+    background: linear-gradient(to right, rgb(0, 0, 0), #808080, #C0392B);
     border: none;
     color: white;
     padding: 10px 20px;
