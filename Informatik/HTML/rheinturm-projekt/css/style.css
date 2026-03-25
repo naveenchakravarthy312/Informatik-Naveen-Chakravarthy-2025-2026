@@ -122,6 +122,7 @@ table {
     padding: 10px;
     border: 1px solid #E6E6E6;
     border-radius: 10px;
+    font-size: x-large;
 }
 .table-row {
     border: 1px solid #E6E6E6;
@@ -133,5 +134,13 @@ table {
 }
 .link:hover {
     color: #cccccc;
+    text-decoration: underline;
+}
+#restaurant-link {
+    color: #c0392b;
+    text-decoration: none;
+}
+#restaurant-link:hover {
+    color: #ff1900;
     text-decoration: underline;
 }
