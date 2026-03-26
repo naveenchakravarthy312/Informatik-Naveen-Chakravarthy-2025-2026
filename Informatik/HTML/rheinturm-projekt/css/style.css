@@ -76,10 +76,7 @@
 }
 #grey-scale {
     background-color: black;
-     filter: grayscale(50%); color: white;
-}
-#contrast {
-    filter: contrast(200%);
+    filter: grayscale(50%); color: white;
 }
 .main {
     padding: 10px;
@@ -99,6 +96,36 @@
     border-radius: 20px;
     background-color: rgba(255, 0, 0, 0.233);
     max-width: 1000px;
+}
+.image2 {
+    background-position: center;
+    height: auto;
+    width: 100%;
+    border-radius: 20px;
+    max-width: 1000px;
+}
+.content-row {
+    display: flex;         /* Places items side-by-side */
+    align-items: flex-start; /* Keeps them aligned at the top */
+    gap: 20px;             /* Space between text and image */
+    margin-left: 0;       /* Adjust overall horizontal position */
+}
+#cover-size {
+    position: sticky;
+    width: 20%;
+    height: 45vh;
+    object-fit: cover;
+    object-position: center;
+    margin-left: 0%;
+    top: 10px;
+    
+}
+.text-box {
+    background-color: #444444;
+    width: 100%;
+    height: 42.5vh;
+    padding: 15px; 
+    border-radius: 25px;
 }
 .header-div {
     display: flex;
