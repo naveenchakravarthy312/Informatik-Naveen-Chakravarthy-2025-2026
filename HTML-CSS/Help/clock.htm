@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Der Lichtzeitpegel - Düsseldorf</title>
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            gap: 50px;
+        }
+
+        /* Information Panel */
+        .info-panel {
+            max-width: 500px;
+        }
+
+        h1 { font-size: 32px; margin-bottom: 20px; color: #212529; }
+        
+        .description {
+            font-size: 18px;
+            line-height: 1.5;
+            color: #495057;
+            margin-bottom: 30px;
+        }
+
+        .how-to-read {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .how-to-read h3 { margin-top: 0; font-size: 18px; color: #495057; }
+        .how-to-read p { margin: 5px 0; color: #6c757d; font-size: 16px; }
+
+        .digital-box {
+            background: #212529;
+            color: #ffffff;
+            display: inline-block;
+            padding: 10px 20px;
+            border-radius: 10px;
+            font-family: monospace;
+            font-size: 24px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+
+        /* The Clock Tower */
+        .tower-container {
+            background-color: #2c2e35;
+            width: 60px;
+            padding: 25px;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin-bottom: 0.5%;
+        }
+
+        .group { display: flex; flex-direction: column; align-items: center; }
+        .light {
+            width: 14px;
+            height: 14px;
+            background-color: #495057;
+            border-radius: 50%;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        .light.on {
+            background-color: #ffffff;
+            box-shadow: 0 0 12px #ffffff;
+        }
+        .red-light {
+            width: 16px;
+            height: 16px;
+            background-color: #ff3e3e;
+            border-radius: 50%;
+            margin: 15px 0;
+            box-shadow: 0 0 15px #ff3e3e;
+        }
+        .spacer { height: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="info-panel">
+        <h1>Der Lichtzeitpegel</h1>
+        <p class="description">
+            Die größte digitale Uhr der Welt, entworfen von Horst H. Baumann. 39 Bullaugen-Lampen am Schaft des Turms zeigen die aktuelle Uhrzeit an, getrennt durch rote Flugsicherungsfeuer.
+        </p>
+        
+        <div class="how-to-read">
+            <h3>Wie man sie liest:</h3>
+            <p>Die Uhr wird von oben nach unten gelesen.</p>
+            <p>Oben: Stunden (Zehner, dann Einer).</p>
+            <p>Mitte: Minuten (Zehner, dann Einer).</p>
+            <p>Unten: Sekunden (Zehner, dann Einer).</p>
+            
+            <div id="digital" class="digital-box">00:00:00</div>
+        </div>
+    </div>
+
+    <div class="tower-container">
+        <div id="hr-tens" class="group"></div>
+        <div class="spacer"></div>
+        <div id="hr-ones" class="group"></div>
+
+        <div class="red-light"></div>
+
+        <div id="min-tens" class="group"></div>
+        <div class="spacer"></div>
+        <div id="min-ones" class="group"></div>
+
+        <div class="red-light"></div>
+
+        <div id="sec-tens" class="group"></div>
+        <div class="spacer"></div>
+        <div id="sec-ones" class="group"></div>
+    </div>
+
+    <script>
+        const layout = {
+            'hr-tens': 2, 'hr-ones': 9,
+            'min-tens': 5, 'min-ones': 9,
+            'sec-tens': 5, 'sec-ones': 9
+        };
+
+        // Build the lights
+        for (const [id, count] of Object.entries(layout)) {
+            const el = document.getElementById(id);
+            for (let i = 0; i < count; i++) {
+                const l = document.createElement('div');
+                l.className = 'light';
+                el.appendChild(l);
+            }
+        }
+
+        function update() {
+            const d = new Date();
+            const h = d.getHours();
+            const m = d.getMinutes();
+            const s = d.getSeconds();
+
+            // Update digital text
+            document.getElementById('digital').innerText = 
+                `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+
+            // Helper to fill from bottom of the group up
+            const fill = (id, val) => {
+                const lights = Array.from(document.getElementById(id).children).reverse();
+                lights.forEach((l, i) => l.classList.toggle('on', i < val));
+            };
+
+            fill('hr-tens', Math.floor(h / 10));
+            fill('hr-ones', h % 10);
+            fill('min-tens', Math.floor(m / 10));
+            fill('min-ones', m % 10);
+            fill('sec-tens', Math.floor(s / 10));
+            fill('sec-ones', s % 10);
+        }
+
+        setInterval(update, 1000);
+        update();
+    </script>
+</body>
+</html>

@@ -3,6 +3,8 @@
 .body {
     font-family: 'Old Standard TT', serif;
     background-color: rgb(230, 230, 230);
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .main {
     padding: 10px;
@@ -119,4 +121,10 @@ footer {
     background-color: #c0392b;
     color: white;
     border: none;
+}
+
+/* Link */
+#source-link {
+    color: #c9c9c9;
+    text-decoration: underline;
 }

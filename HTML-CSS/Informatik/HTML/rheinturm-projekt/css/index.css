@@ -3,6 +3,8 @@
 .body {
     font-family: 'Old Standard TT', serif;
     background-color: rgb(230, 230, 230);
+    margin-left: 10%;
+    margin-right: 10%;
 }
 .main {
     padding: 10px;
@@ -22,18 +24,12 @@ h2 {
     border-radius: 5px;
     border: 5px groove;
 }
-p {
+.p {
     background-color: #c9c9c9;
     padding: 10px;
     border-radius: 5px;
 }
-ul {
-    background-color: #c9c9c9;
-    padding: 10px;
-    border-radius: 5px;
-    padding-left: 40px;
-}
-ol {
+.l {
     background-color: #c9c9c9;
     padding: 10px;
     border-radius: 5px;
@@ -113,6 +109,7 @@ footer {
     color: white;
     border: none;
 }
+
 /*Image*/
 #Flag {
     background-image: url(img/water-texture.avif);
@@ -121,4 +118,10 @@ footer {
     background-repeat: no-repeat;
     background-attachment: scroll;
     border: 5px groove;
+}
+
+/* Link */
+#source-link {
+    color: #c9c9c9;
+    text-decoration: underline;
 }
