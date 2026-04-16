@@ -34,6 +34,7 @@ h2 {
     background-color: #c9c9c9;
     padding: 10px;
     border-radius: 5px;
+    margin-bottom: 50px;
 }
 
 /*Button*/
@@ -203,7 +204,6 @@ h1 { font-size: 32px; margin-bottom: 20px; color: #212529; }
     background-color: #ff3e3e;
     border-radius: 50%;
     margin: 10px 0
-    box-shadow: 0 0 10px #ff3e3e;
 }
 
 .spacer { 
