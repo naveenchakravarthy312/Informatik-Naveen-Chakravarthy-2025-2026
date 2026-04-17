@@ -105,23 +105,11 @@ footer {
     margin: 4px 2px;
     text-align: center;
     border-radius: 5px;
-    left: 50%;
-    position: scroll;
 }
 #button1 {
     background-color: #c0392b;
     color: white;
     border: none;
-}
-
-/*Image*/
-#Flag {
-    background-image: url(img/water-texture.avif);
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    border: 5px groove;
 }
 
 /* Link */
