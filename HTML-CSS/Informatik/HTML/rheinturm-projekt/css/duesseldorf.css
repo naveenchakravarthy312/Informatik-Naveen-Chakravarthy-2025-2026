@@ -13,7 +13,6 @@
     top: 30%;
     color: #c0392b;
     text-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    font-size: auto;
     margin-top: auto;
     text-align: center;
     max-width: 1000px;
@@ -26,22 +25,31 @@ footer {
     font-size: 14px;
     width: 100%;
     padding: 10px 0;
+    position: absolute ;
+    font-family: 'Old Standard TT', serif;
 }
 
 /*Button*/
-.button{
+button{
     color: #25293A;
     cursor: pointer;
     text-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    border-radius: 5px;
+    border-radius: 10px;
     height: 40px;
     border-radius: 8px;
     width: 30%;
 }
-.button:hover {
+button:hover {
     background-color: #696969;
     color: #3d3d3d;
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
+    border-radius: 10px;
+    height: 40px;
+    width: 35%;
+    transition: 0.2s;
 }
+
 
 /*Div*/
 .header-div {
@@ -72,7 +80,7 @@ footer {
 
 /* Gemini generated */
 .swiper {
-    border-radius: 5px;
+    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.2);        
     width: 100%;
     height: 700px;
@@ -152,7 +160,7 @@ footer {
     padding: 10px 20px;
     margin: 4px 2px;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 10px;
     left: 50%;
     position: scroll;
 }
@@ -160,5 +168,8 @@ footer {
 /* Link */
 #source-link {
     color: #c9c9c9;
-    text-decoration: underline;
+}
+#source-link:hover {
+    color: #ff0000;
+    text-decoration: none;
 }
