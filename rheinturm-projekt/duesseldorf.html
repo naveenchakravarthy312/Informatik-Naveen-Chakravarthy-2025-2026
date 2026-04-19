@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="de">
+
+    <head>
+        <!-- Meta data -->
+        <meta charset="UTF-8">
+        <title>Düsseldorf</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/duesseldorf.css">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+        <!-- Tab Icon -->
+        <link type="image/png" sizes="32x32" rel="icon" href="https://velaro-finanz.de/wp-content/uploads/2025/10/DUS-min-768x768.png">
+
+        <!-- Image slider Gemini generated -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </head>
+
+    <body style="background-color: rgb(230, 230, 230);">
+        <div class="body">
+            <header class="main">
+                <div class="header-div">
+                    <!-- Image with Link -->
+                    <a href="https://www.duesseldorf.de" target="_blank">
+                        <img src="https://www.duesseldorf.de/fileadmin/_processed_/e/c/csm_start_welcomecard_4132e406a9.jpg" alt="Rheinturm Düsseldorf" class="image2">
+                    </a>
+                    <h1 class="h1" style="filter: contrast(300%);">Der Rheinturm - Homepage</h1>
+                </div>
+
+                <!-- Button -->
+                <nav id="button-menu" class="main">
+                    <a href="index.html" ><button><b>Homepage</b></button></a>
+                    <a href="info.html"><button><b>Informationen</b></button></a>
+                    <a href="kontakt.html"><button><b>Besuch & Kontakt</b></button></a>
+                </nav>
+            </header>
+
+            <main >
+                <section>
+                    <!-- Image slider Gemini generated -->
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="https://www.merian.de/uploads/media/jalag-4x3/09/9259-duesseldorf-altstadt.jpg?v=1-0" alt="Düsseldorf Altstadt"></div>
+                            <div class="swiper-slide"><img src="https://urlaubs-express.de/wp-content/uploads/2024/11/001-scaled.jpg" alt="Rheinkniebrücke"></div>
+                            <div class="swiper-slide"><img src="https://cdn.urlaubsguru.de/wp-content/uploads/2020/02/Medienhafen-Duesseldorf.-iStock-901469416-2.jpg" alt="Medienhafen"></div>
+                        </div>
+                        
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+                    <script>
+                        const swiper = new Swiper('.swiper', {
+                        loop: true,
+                        autoplay: { delay: 5000 },
+                        pagination: { el: '.swiper-pagination', clickable: true },
+                        navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+                        });
+                    </script>
+                </section>
+
+                <section>
+                    <!-- Düsseldorf Info Boxes -->
+                    <div class="info-container">
+                        <div class="info-box">
+                            <h3 style="filter: contrast(300%);">Investitionen in den Radverkehr</h3>
+                            <p>Das Land treibt den Ausbau der Radwege mit<a class="link" href="https://www.duesseldorf.de/aktuelles/news/detailansicht/newsdetail/investitionen-in-den-radverkehr">...</a></p>
+                        </div>
+                        <div class="info-box">
+                            <h3 style="filter: contrast(300%);">Antrittsbesuch</h3>
+                            <p>Die bulgarischen Generalkonsulin, Snezhina Marinova, kam am<a class="link" href="https://www.duesseldorf.de/aktuelles/news/detailansicht/newsdetail/antrittsbesuch-der-bulgarischen-generalkonsulin-snezhina-marinova">...</a></p>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; Von Naveen Chakravarthy Mohankumar - Informatik Projekt 2026 Quellen: <a id="source-link" href="https://de.wikipedia.org/wiki/Rheinturm">Wikipedia</a></p>
+        </footer>
+    </body>
+</html>

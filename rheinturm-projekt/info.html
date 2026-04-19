@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <!-- Meta data -->
+        <meta charset="UTF-8">
+        <title>Information</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/info.css">
+
+        <!-- Google Font -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+        <!-- Tab Icon -->
+        <link type="image/png" sizes="32x32" rel="icon" href="img/icons8-rheinturm-32.png">
+    </head>
+
+    <body style="background-color: rgb(230, 230, 230);">
+        <div class="body">
+            <header class="main">
+                <div class="header-div">
+
+                    <!-- Image with link -->
+                    <a href="duesseldorf.html">
+                        <img src="https://duesseldorfer-skyline.de/resources/skyline-duesseldorf.webp" alt="Rheinturm Düsseldorf" class="image1">
+                    </a>
+                    <h1 class="h1">Der Rheinturm - Homepage</h1>
+                </div>
+
+                <!-- Button -->
+                <nav id="button-menu2" class="main">
+                    <a href="index.html" ><button ><b>Homepage</b></button></a>
+                    <button id="button2"><b>Informationen</b></button>
+                    <a href="kontakt.html"><button><b>Besuch & Kontakt</b></button></a>
+                </nav>
+            </header>
+
+            <!-- Content -->
+            <main class="main">
+                <section>
+                    <h2>Historie</h2>
+                    <p class="p">
+                        Der Rheinturm (erbaut 1979 - 1982, Architekt H. Deilmann) ist das markante Wahrzeichen der Düsseldorfer Rheinkulisse. Er steht am Rande 
+                        der südlichen Innenstadt am Eingang des MedienHafens, direkt neben dem nordrhein-westfälischen Landtag bzw. dem WDR und besitzt in
+                        172,5 Metern Höhe <a id="restaurant-link" href="restaurant.html">das Restaurant QOMO</a> mit 144 Sitzplätzen an der Fensterfront, 
+                        das sich innerhalb von 72 Minuten einmal um die eigene Achse dreht. Darunter befinden sich die Aussichtsplattform M168 (168 m) mit Snackbar
+                        und Eventflächen mit atemberaubendem Blick auf die Rheinmetropole: MedienHafen, Altstadt, Hofgarten, Königsallee und der Rhein mit seiner
+                        Brückenfamilie liegen zu Füßen des Rheinturms. Bei schönem Wetter reicht die Sicht bis zum Kölner Dom. Die beiden Publikumsaufzüge befördern
+                        die Besucher mit einer Geschwindigkeit von 4 m/s auf die verschiedenen Ebenen.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Architektur</h2>
+                    <p class="p">
+                        Der Rheinturm ist ein 240 Meter hoher Fernsehturm, der aus Stahlbeton gebaut wurde. Er hat eine schlanke, konische Form und ist mit einer
+                        Aussichtsplattform und einem Restaurant ausgestattet. Der Turm ist ein markantes Wahrzeichen von Düsseldorf und bietet einen atemberaubenden
+                        Blick auf die Stadt und den Rhein.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>Besonderheiten</h2>
+                    <p class="p">
+                        Als besondere Attraktion ist eine Lichtskulptur auf der Nordostseite des Schaftes angebracht, auf welcher die Uhrzeit von der Altstadt aus
+                        abgelesen werden kann. Der Künstler Horst H. Baumann nennt sein Werk „Lichtzeitpegel“. Sie ist gemäß dem Guinness-Buch der Rekorde die größte
+                        dezimale „Zeitskala“ der Welt und wurde ursprünglich für den Pylon der Oberkasseler Brücke zu deren Einweihung im April 1976 geplant, aber
+                        erst im November 1981 am Rheinturm realisiert.
+                    </p>
+                </section>
+
+                <section>
+                    <!-- Clock - Gemini generated -->
+                    <h2>Der Lichtzeitpegel</h2>
+                    <div class="clock-container">
+                        <p class="description">
+                            Die größte digitale Uhr der Welt, entworfen von Horst H. Baumann. 39 Bullaugen-Lampen am Schaft des Turms zeigen die aktuelle Uhrzeit an, getrennt durch rote Flugsicherungsfeuer.
+                        </p>
+                        
+                        <div class="how-to-read">
+                            <h3>Wie man sie liest:</h3>
+                            <p>Die Uhr wird von oben nach unten gelesen.</p>
+                            <p>Oben: Stunden (Zehner, dann Einer).</p>
+                            <p>Mitte: Minuten (Zehner, dann Einer).</p>
+                            <p>Unten: Sekunden (Zehner, dann Einer).</p>
+                            
+                            <div id="digital" class="digital-box">00:00:00</div>
+                        </div>
+
+                        <div class="tower-container">
+                            <div id="hr-tens" class="group"></div>
+                            <div class="spacer"></div>
+                            <div id="hr-ones" class="group"></div>
+
+                            <div class="red-light"></div>
+
+                            <div id="min-tens" class="group"></div>
+                            <div class="spacer"></div>
+                            <div id="min-ones" class="group"></div>
+
+                            <div class="red-light"></div>
+
+                            <div id="sec-tens" class="group"></div>
+                            <div class="spacer"></div>
+                            <div id="sec-ones" class="group"></div>
+                        </div>
+                    </div>
+
+                    <script>
+                        const layout = {
+                            'hr-tens': 2, 'hr-ones': 9,
+                            'min-tens': 5, 'min-ones': 9,
+                            'sec-tens': 5, 'sec-ones': 9
+                        };
+
+                        for (const [id, count] of Object.entries(layout)) {
+                            const el = document.getElementById(id);
+                            for (let i = 0; i < count; i++) {
+                                const l = document.createElement('div');
+                                l.className = 'light';
+                                el.appendChild(l);
+                            }
+                        }
+
+                        function update() {
+                            const d = new Date();
+                            const h = d.getHours();
+                            const m = d.getMinutes();
+                            const s = d.getSeconds();
+
+                            document.getElementById('digital').innerText = 
+                                `${h.toString().padStart(2,'0')}:${m.toString().padStart(2,'0')}:${s.toString().padStart(2,'0')}`;
+                            const fill = (id, val) => {
+                                const lights = Array.from(document.getElementById(id).children).reverse();
+                                lights.forEach((l, i) => l.classList.toggle('on', i < val));
+                            };
+
+                            fill('hr-tens', Math.floor(h / 10));
+                            fill('hr-ones', h % 10);
+                            fill('min-tens', Math.floor(m / 10));
+                            fill('min-ones', m % 10);
+                            fill('sec-tens', Math.floor(s / 10));
+                            fill('sec-ones', s % 10);
+                        }
+
+                        setInterval(update, 1000);
+                        update();
+                    </script>
+                </section>
+
+                <section>
+                    <h2>Rheinturm Lichtshow</h2>
+                    <iframe class="video" width="100%" src="https://www.youtube.com/embed/sNF6uaiXbgM"></iframe>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>KUNSTPROJEKT „RHEINTURM IN ART“: FARBENSPIEL MIT ÖKOSTROM UND NORDRHEIN-WESTFALENS KÜNSTLERINNEN UND KÜNSTLERN</th>
+                                <th>RHEINKOMET &copy</th>
+                                <th>BASTON MARIA AMALIA</th>
+                                <th>HERZ-JESU-KIRCHE</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>Die Düsseldorfer Bürgerstiftung "DUS-illuminated" hat gemeinsam mit dem Landtag Nordrhein-Westfalen und dem Kunstprojektentwickler und Kurator Marcus Schafer das Kunstprojekt "Rheinturm</td>
+                                <td>Der Rheinkomet&reg wurde im Jahr 2016 anlasslich der 70-Jahr-Feier der Grundung des Bundeslandes Nordrhein-Westfalen als Lichtinstallation auf dem Rheinturm in</td>
+                                <td>Zum 475-jahrigen Jubilaum der Festung Dusseldorf hat die Dusseldorfer Burgerstiftung DUS-illuminated&reg zusammen mit der Stadt Dusseldorf die Bastion illuminiert. Das...</td>
+                                <td>Der Stiftung DUS-illuminated&reg ist es gelungen, in Kooperation mit dem Multimediakünsterler Klaus H.R Gendrung (Modern Media Group), die durch dir...</td>
+                            </tr>
+                            <tr class="mehr-row">
+                                <td><a href="https://dus-illuminated.de/kunstprojekt-rheinturm-in-art-farbenspiel-mit-oekostrom-und-nordrhein-westfalens-kuenstlerinnen-und-kuenstlern/"><button class="mehr">Mehr</button></a></td>
+                                <td><a href="https://dus-illuminated.de/rheinkomet/"><button  class="mehr">Mehr</button></a></td>
+                                <td><a href="https://dus-illuminated.de/bastion-maria-amalia/"><button  class="mehr">Mehr</button></a></td>
+                                <td><a href="https://dus-illuminated.de/herz-jesu-kirche/"><button  class="mehr">Mehr</button></a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+        <!-- Footer -->
+        <footer>
+            <p>&copy; Von Naveen Chakravarthy Mohankumar - Informatik Projekt 2026 Quellen: <a id="source-link" href="https://de.wikipedia.org/wiki/Rheinturm">Wikipedia</a></p>
+        </footer>
+        
+    </body>
+</html>

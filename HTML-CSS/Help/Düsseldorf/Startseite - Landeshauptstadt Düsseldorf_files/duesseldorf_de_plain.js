@@ -1,1 +1,0 @@
-var ea_plain_config = {"plainlanguage":{}}
