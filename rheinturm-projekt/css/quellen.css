@@ -9,7 +9,7 @@
 .main {
     padding: 10px;
 }
-.h1 {
+h1 {
     top: 30%;
     color: #c0392b;
     text-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
@@ -25,28 +25,45 @@ h2 {
     border-radius: 10px;
     border: 5px;
     box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    transition: 0.9s;
+    transition: 1s;
+    margin-top: 100px;
 }
-.p {
-    background-color: #c9c9c9;
-    padding: 10px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    transition: 0.9s;
-    margin-bottom: 50px;
+table {
+    width: 100%;
+    margin-bottom: 100px;
 }
-p:hover, .l:hover, h2:hover, h1:hover{
+.links:hover, h2:hover, .category:hover  {
     box-shadow: 0px 0px 0px transparent;
-    transition: 0.9s;
+    transition: 1s;
 }
-.l {
+.links {
     background-color: #c9c9c9;
     padding: 10px;
+    word-break: break-all;
     border-radius: 10px;
     padding-left: 40px;
     box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    transition: 0.9s;
-    margin-bottom: 50px;
+    transition: 1s;
+    word-break: break-all;
+}
+.link {
+    color: #c0392b;
+    text-decoration: none;
+}
+.link:hover {
+    color: #ff0000;
+    text-decoration: underline;
+}
+.category {
+    background-color: #c0392b;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
+    transition: 1s;
+    text-align: center;
+    width: 25px;
+    margin: 0 auto;
 }
 
 /*Button*/
@@ -70,15 +87,6 @@ button:hover {
     width: 35%;
     transition: 0.2s;
 }
-
-/*Div*/
-.header-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-}
-
 /*Image*/
 .image1 {
     background-position: center;
@@ -98,49 +106,6 @@ button:hover {
     transform: scale(1.05);
     transition: 0.2s;
 }
-.img-box {
-    width: 30%;
-}
-/* Borrowed from https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp */
-* {
-    box-sizing: border-box;
-}
-.row {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0 4px;
-    margin-bottom: 50px;
-}
-.column {
-    -ms-flex: 50%;
-    flex: 50%;
-    padding: 0 4px;
-}
-.column img {
-    margin-top: 8px;
-    vertical-align: middle;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    transition: 1s;
-}
-.column img:hover {
-    transform: scale(1.1);
-    transition: 0.2s;
-}
-
-/* Video */
-iframe {
-    width: 100%;
-    height: 56.25vw;
-    max-width: 1920px;
-    max-height: 850px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-    border: none;
-    transition: 0.9s;
-}
 /*Footer*/
 footer {
     text-align: center;
@@ -149,25 +114,19 @@ footer {
     font-size: 14px;
     width: 100%;
     padding: 10px 0;
-    position: absolute ;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /*Id*/
 /*Button*/
 #button-menu1 {
-    background: linear-gradient(to right, #C0392B, #808080, #ffffff);
+    background: linear-gradient(to right, #000000, #808080, #ffffff);
     border: none;
     color: white;
     padding: 10px 20px;
     margin: 4px 2px;
     text-align: center;
     border-radius: 10px;
-}
-#button1 {
-    background-color: #c0392b;
-    color: white;
-    border: none;
 }
 
 /* Link */
