@@ -1,4 +1,4 @@
-## Projekt: „Meine lokale Entdecker‑Seite“
+# Projekt 1: „Meine lokale Entdecker‑Seite“
 
 ### Ziel
 Du erstellst eine eigene kleine Website über einen Ort in deiner Umgebung (z. B. Stadtteil, Park, Verein, Museum, Café, Denkmal). Du zeigst, dass du HTML‑Struktur und CSS‑Gestaltung sicher anwenden kannst.

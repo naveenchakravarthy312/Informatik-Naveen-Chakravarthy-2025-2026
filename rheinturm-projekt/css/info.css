@@ -66,6 +66,7 @@ button:hover {
     border: none;
     padding: 10px 20px;
     border-radius: 10px;
+    text-align: center;
 }
 .mehr:hover {
     background-color: #29487c;
