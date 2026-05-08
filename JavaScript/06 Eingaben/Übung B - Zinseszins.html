@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Übung B: Pythagoras</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="30.04.2026">
+        <style>
+            .card {
+                background: #357096;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 15px;
+                box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
+                text-align: center;
+                border: 5px solid #024c7c;
+            }
+            input {
+                display: block;
+                margin: 10px 0;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 90%;
+            }
+            button {
+                background-color: #024c7c;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            h1 {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+        <h1>Übung B: Pythagoras</h1>
+        <script>
+            function number() {
+            var p = document.getElementById("a").value;
+            var K0 = document.getElementById("b").value
+            var n = document.getElementById("c").value;
+            var Kn = K0 * Math.pow((1 + p/100), n);
+            var K0;
+            document.getElementById("answer").innerHTML = Kn;
+                return;
+            }
+        </script>
+
+        <input type="number" id="a" placeholder="p?">
+        <input type="number" id="b" placeholder="K0?"> 
+        <input type="number" id="c" placeholder="n?">
+        <button onClick="number();">Solve</button> 
+        <p id="answer"></p>
+        </div>
+    </body>
+</html>

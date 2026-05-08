@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Funktionen</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="30.04.2026">
+    </head>
+
+    <body>
+        <script>
+        function deinName() {
+            var ausgabe = document.getElementById("derVorname").value;
+            ausgabe = "Hallo " + ausgabe;
+            document.getElementById("dieAusgabe").innerHTML = ausgabe;
+            return; 
+        }
+        </script>
+
+        <input id="derVorname" placeholder="Dein Vorname?"> 
+        <button onClick="deinName();">Start</button> 
+        <p id="dieAusgabe"></p> 
+    </body>
+</html>

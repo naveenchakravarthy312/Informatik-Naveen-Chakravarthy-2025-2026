@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>Rundfunktionen</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="30.04.2026">
+    </head>
+
+    <body>
+        <script>
+            function runden(zahl, stellen) {
+                zahl = zahl * Math.pow(10, stellen);
+                zahl = Math.round(zahl) / Math.pow(10, stellen);
+                return zahl;
+            }
+            var ausgabe = runden(34.3862345, 3); // <-- Start der Funktion
+            window.alert(ausgabe);
+       </script>
+    </body>
+</html>
