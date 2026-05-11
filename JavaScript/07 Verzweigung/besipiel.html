@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <title>True/False</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="11.05.2026">
+    </head>
+
+    <body>
+        <script>
+            var benutzer = window.prompt("Welcher Benutzer?", "User");
+            var zahl_1 = Number(window.prompt("Erste Zahl eingeben!"));
+            var zahl_2 = Number(window.prompt("Zweite Zahl eingeben!"));
+            if(zahl_1 > zahl_2) {var ausgabe = "Erste Zahl ist größer";}
+            else {var ausgabe = "Zweite Zahl ist größer";}
+            if(zahl_1 == zahl_2) {var ausgabe = "Beide Zahlen sind gleich";}
+            window.alert(ausgabe);
+            if (benutzer == "User" && zahl_1 == zahl_2)
+                {window.alert("User hat zwei gleiche Zahlen eingegeben!");
+            }
+            if (benutzer == "Admin" || benutzer == "Root") 
+                {window.alert("Egal, Root bzw. Admin darf sowieso alles!");
+            }
+        </script>
+    </body>
+</html>
