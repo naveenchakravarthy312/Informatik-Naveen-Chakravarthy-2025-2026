@@ -2,9 +2,9 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <title>Übung C: Deltoid</title>
+        <title>True/False</title>
         <meta name="author" content="Naveen Chakravarthy Mohankumar">
-        <meta name="date" content="30.04.2026">
+        <meta name="date" content="11.05.2026">
         <style>
             .card {
                 background: #357096;
@@ -17,11 +17,11 @@
             }
             input {
                 display: block;
-                margin: 10px 0;
+                margin: 10px 0 0;
                 padding: 8px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                width: 90%;
+                width: 100%;
             }
             button {
                 background-color: #024c7c;
@@ -30,6 +30,7 @@
                 padding: 10px 20px;
                 border-radius: 5px;
                 cursor: pointer;
+                margin: 10px;
             }
             button:hover {
                 background-color: #002842;
@@ -42,24 +43,25 @@
 
     <body>
         <div class="card">
-            <h1>Übung C: Deltoid</h1>
+            <h1>Geschlecht</h1>
             <script>
-                function number() {
-                    var a = document.getElementById("a").value;
-                    var b = document.getElementById("b").value;
-                    var f = document.getElementById("f").value;
-                    var e = Math.sqrt(Math.pow(a, 2) - Math.pow(f/2, 2)) + Math.sqrt(Math.pow(b, 2) - Math.pow(f/2, 2));
-                    var A = e * f / 2;
-                    document.getElementById("answer").innerHTML = "Der Flächeninhalt beträgt = " + A + "<br>Die Diagonalen betragen = " + e + " und " + f;
-                    return;
+                function Geschlecht() {
+                    var Mann = document.getElementById("mann") .checked;
+                    var Frau = document.getElementById("frau") .checked;
+                    var Name = document.getElementById("name").value;
+                    if (Mann == true) {
+                        document.getElementById("output").innerHTML = "Sehr geehrter Herr " + Name;
+                    }
+                    else if (Frau == true) {
+                        document.getElementById("output").innerHTML = "Sehr geehrte Frau " + Name;
+                    }
                 }
             </script>
-
-            <input type="number" id="a" placeholder="a?">
-            <input type="number" id="b" placeholder="b?">
-            <input type="number" id="f" placeholder="f?">
-            <button onClick="number();">Solve</button> 
-            <p id="answer"></p>
+            <input type="radio" id="mann" name="geschlecht">Mann<br>
+            <input type="radio" id="frau" name="geschlecht">Frau<br>
+            <input type="text" id="name" placeholder="Name?">
+            <button onclick= "Geschlecht()">Hochladen</button>
+            <p id="output"></p>
         </div>
     </body>
 </html>

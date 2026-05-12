@@ -2,9 +2,9 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <title>Übung A: Pythagoras</title>
+        <title>True/False</title>
         <meta name="author" content="Naveen Chakravarthy Mohankumar">
-        <meta name="date" content="30.04.2026">
+        <meta name="date" content="11.05.2026">
         <style>
             .card {
                 background: #357096;
@@ -17,11 +17,11 @@
             }
             input {
                 display: block;
-                margin: 10px 0;
+                margin: 10px 0 0;
                 padding: 8px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
-                width: 90%;
+                width: 100%;
             }
             button {
                 background-color: #024c7c;
@@ -30,6 +30,7 @@
                 padding: 10px 20px;
                 border-radius: 5px;
                 cursor: pointer;
+                margin: 10px;
             }
             button:hover {
                 background-color: #002842;
@@ -42,22 +43,18 @@
 
     <body>
         <div class="card">
-        <h1>Übung A: Pythagoras</h1>
-        <script>
-            function number() {
-                var a = document.getElementById("a").value;
-                var b = document.getElementById("b").value;
-                var c = Math.pow(a, 2) + Math.pow(b, 2);
-                c = Math.sqrt(c);
-                document.getElementById("answer").innerHTML = c;
-                return;
-            }
-        </script>
+            <script>
+                function Bestellen() {
+                    var anzahl = document.getElementById("anzahl").value;
+                    var output = 
+                }
+            </script>
 
-        <input type="number" id="a" placeholder="a?">
-        <input type="number" id="b" placeholder="b?"> 
-        <button onClick="number();">Solve</button> 
-        <p id="answer"></p>
+            <h1>Rabattberechnung</h1>
+            <p>Wie viele Flachen á €12,40 möchten Sie bestellen?</p><br>
+            <p>Anzahl:</p><input type="number" id="anzahl" placeholder="Anzahl eingeben"><p>Flachen</p>
+            <button>Bestellen</button>
+            <p id="output" onclick="Bestellen()"></p>
         </div>
     </body>
 </html>
