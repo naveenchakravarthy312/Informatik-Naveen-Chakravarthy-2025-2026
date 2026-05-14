@@ -2,43 +2,10 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <title>True/False</title>
+        <title>Rabattberechnung</title>
         <meta name="author" content="Naveen Chakravarthy Mohankumar">
         <meta name="date" content="11.05.2026">
-        <style>
-            .card {
-                background: #357096;
-                border-radius: 12px;
-                padding: 20px;
-                margin: 15px;
-                box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
-                text-align: center;
-                border: 5px solid #024c7c;
-            }
-            input {
-                display: block;
-                margin: 10px 0 0;
-                padding: 8px;
-                border: 1px solid #ccc;
-                border-radius: 4px;
-                width: 100%;
-            }
-            button {
-                background-color: #024c7c;
-                color: white;
-                border: none;
-                padding: 10px 20px;
-                border-radius: 5px;
-                cursor: pointer;
-                margin: 10px;
-            }
-            button:hover {
-                background-color: #002842;
-            }
-            h1 {
-                color: #ffffff;
-            }
-        </style>
+        
     </head>
 
     <body>
@@ -46,15 +13,30 @@
             <script>
                 function Bestellen() {
                     var anzahl = document.getElementById("anzahl").value;
-                    var output = 
+                    if (anzahl < 8) {
+                        var rabatt = 1;
+                        var percent = "0%";
+                    }
+                    if (anzahl >= 8) {
+                        var rabatt = 0.95;
+                        var percent = "5%";
+                    }
+                    if (anzahl > 16) {
+                        var rabatt = 0.88;
+                        var percent = "12%";
+                    }
+                    var price = anzahl * 12.40;
+                    var sum = price * rabatt;
+                    var output = "Sie haben " + anzahl + " Flachen bestellt!<br>" + "Sie bekommen " + percent + " Rabatt.<br>Brutto: €" + sum + " - Rabatt: " + percent + " = €" + price;
+                    document.getElementById("output").innerHTML = output;
                 }
             </script>
 
             <h1>Rabattberechnung</h1>
             <p>Wie viele Flachen á €12,40 möchten Sie bestellen?</p><br>
             <p>Anzahl:</p><input type="number" id="anzahl" placeholder="Anzahl eingeben"><p>Flachen</p>
-            <button>Bestellen</button>
-            <p id="output" onclick="Bestellen()"></p>
+            <button onclick="Bestellen()">Bestellen</button>
+            <p id="output"></p>
         </div>
     </body>
 </html>
