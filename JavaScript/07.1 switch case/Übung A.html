@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <title>Postleitzahl</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="15.05.2026">
+
+        <!-- Style -->
+        <style>
+            .card {
+                background: #357096;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 15px;
+                box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
+                text-align: center;
+                border: 5px solid #024c7c;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+            input {
+                display: block;
+                margin: 10px 0 0;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 100%;
+                margin: 10px;
+            }
+            button {
+                background-color: #024c7c;
+                color: white;
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                cursor: pointer;
+                margin: 10px;
+            }
+            button:hover {
+                background-color: #002842;
+            }
+            h1 {
+                color: #ffffff;
+            }
+            #output {
+                background-color: #ffffff;
+                padding: 30px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <script>
+                function ZIP() {
+                    // Variables
+                    var postleitzahl = document.getElementById("ZIP").value;
+                    var ort;
+
+                    // Options
+                    switch(postleitzahl) {
+                    case "1" :
+                        ort = "Wien (auch teilweise für benachbarte Orte in Niederösterreich)"; break;
+                    case "2" :
+                        ort = "östliches und südliches Niederösterreich, auch teilweise für Nordburgenland"; break;
+                    case "3" :
+                        ort = "westliches Niederösterreich und kleine Teile südöstliches Oberösterreich"; break;
+                    case "4" :
+                        ort = "Oberösterreich und kleine Teile westliches Niederösterreich"; break;
+                    case "5" :
+                        ort = "Salzburg und westliches Oberösterreich"; break;
+                    case "6" :
+                        ort = "Nordtirol und Vorarlberg"; break;
+                    case "7" :
+                        ort = "Burgenland, soweit es nicht unter 2xxx oder 8xxx fällt"; break;
+                    case "8" :
+                        ort = "Steiermark, Teile des Bezirks Bezirk Jennersdorf im Südburgenland"; break;
+                    case "9" :
+                        ort = "Kärnten und Osttirol"; break;
+                    default : ort = "Bitte geben Sie eine gültige Postleitzahl ein."
+                    }
+
+                    // Output
+                    document.getElementById("output").innerHTML = ort;
+                }
+            </script>
+
+            <!-- Title -->
+            <h1>Postleitzahl</h1>
+        
+            <!-- Input -->
+            <div class="flexbox">
+                <input type="number" id="ZIP" onkeyup="ZIP()" placeholder="Postleitzahl?" >
+            </div>
+            <p id="output">Was ist ihren Postleitzahl?</p>
+        </div>
+    </body>
+</html>

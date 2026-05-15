@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <!-- Meta -->
+        <meta charset="utf-8">
+        <title>Rabattberechnung</title>
+        <meta name="author" content="Naveen Chakravarthy Mohankumar">
+        <meta name="date" content="15.05.2026">
+
+        <!-- Style -->
+        <style>
+            .card {
+                background: #357096;
+                border-radius: 12px;
+                padding: 20px;
+                margin: 15px;
+                box-shadow: 2px 2px 4px rgba(102, 102, 102, 0.7);
+                text-align: center;
+                border: 5px solid #024c7c;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+            }
+            input {
+                display: block;
+                margin: 10px 0 0;
+                padding: 8px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                width: 90%;
+                margin: 10px;
+            }
+            h1 {
+                color: #ffffff;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="card">
+            <script>
+                var prodOrt = "";
+                function meineFunktion() {
+                    // Variables
+                    var dasAuto = document.getElementById("deAuto").value;
+
+                    // Options
+                    switch(dasAuto) {
+                    case "BMW": 
+                        prodOrt = "München"; break;
+                    case "VW": 
+                        prodOrt = "Wolfburg"; break;
+                    case "Opel": 
+                        prodOrt = "Rüsselsheim am Main"; break;
+                    case "Porsche":
+                        prodOrt = "Stuttgart"; break;
+                    default: prodOrt = "Gültige Automarke eingeben!"; break;
+                    }
+                    document.getElementById("ausgabe").innerHTML = prodOrt; 
+                }
+            </script>
+
+            <!-- Title -->
+            <h1>Geben Sie bitte eine deutsche Automarken ein!</h1>
+
+            <!-- Input -->
+            <input type="text" id="deAuto" onKeyUp="meineFunktion();">
+
+            <!-- Output -->
+            <p id="ausgabe"></p>
+        </div>
+    </body>
+</html>

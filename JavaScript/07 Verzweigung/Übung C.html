@@ -3,9 +3,9 @@
     <head>
         <!-- Meta -->
         <meta charset="utf-8">
-        <title>Rabattberechnung</title>
+        <title>Systemvoraussetzungen</title>
         <meta name="author" content="Naveen Chakravarthy Mohankumar">
-        <meta name="date" content="14.05.2026">
+        <meta name="date" content="15.05.2026">
 
         <!-- Style -->
         <style>
@@ -58,47 +58,44 @@
     <body>
         <div class="card">
             <script>
-                function Bestellen() {
-
-                    // Varianble
-                    var anzahl = document.getElementById("anzahl").value;
+                function Ueberprufen() {
+                    // Variable
+                    var ram = document.getElementById("ram").value;
+                    var prozessor = document.getElementById("prozessor").value;
+                    var festplatte = document.getElementById("festplatte").value;
 
                     // if-else
-                    if (anzahl < 8) {
-                        var rabatt = 1;
-                        var percent = "0%";
+                    if (ram < 2 && prozessor < 1.8 && festplatte < 30) {
+                        var req = "Entspricht nicht den Anforderungen ";
                     }
-                    if (anzahl >= 8) {
-                        var rabatt = 0.95;
-                        var percent = "5%";
+                    if (ram >= 2 && prozessor >= 1.8 && festplatte >= 30) {
+                        var req = "Threedim Lite (RAM: 2 GiB, Prozessor: 1.8 GHz, Festplatte: 30 GiB)";
                     }
-                    if (anzahl >= 16) {
-                        var rabatt = 0.88;
-                        var percent = "12%";
+                    if (ram >= 4 && prozessor >= 2 && festplatte >= 40) {
+                        var req = "Threedim Full (RAM: 4 GiB, Prozessor: 2 GHz, Festplatte: 40 GiB)";
                     }
-
-                    // Variablen berechnung
-                    var price = anzahl * 12.40;
-                    var sum = price * rabatt;
-                    var rabattpercent = price - sum;
+                    if (ram >= 16 && prozessor >= 3 && festplatte >= 120) {
+                        var req = "Threedim Prof (RAM: 16 GiB, Prozessor: 3 GHz, Festplatte: 120 GiB)";
+                    }
 
                     // Output
-                    var output = "Sie haben " + anzahl + " Flachen bestellt!<br>" + "Sie bekommen " + percent + " Rabatt.<br>Brutto: €" + price.toFixed(2) + " - Rabatt: €" + rabattpercent.toFixed(2) + " = €" + sum.toFixed(2);
-                    document.getElementById("output").innerHTML = output;
+                    document.getElementById("output").innerHTML = req;
                 }
             </script>
 
             <!-- Title -->
-            <h1>Rabattberechnung</h1>
-        
+            <h1>Systemvoraussetzungen</h1>
+            
             <!-- Input -->
             <div class="flexbox">
-                <p>Anzahl:</p><input type="number" id="anzahl" placeholder="Anzahl eingeben"><p>Flachen</p>
-                <button onclick="Bestellen()">Bestellen</button>
+                <input type="number" id="ram" placeholder="RAM?">
+                <input type="number" id="prozessor" placeholder="Prozessor?">
+                <input type="number" id="festplatte" placeholder="Festplatte?">
+                <button onclick="Ueberprufen()">Überprüfen</button>
             </div>
 
             <!-- Output -->
-            <p id="output">Wie viele Flachen á €12,40 möchten Sie bestellen?</p>
+            <p id="output">Threedim Lite (RAM: 2 GiB, Prozessor: 1.8 GHz, Festplatte: 30 GiB)<br>Threedim Full (RAM: 4 GiB, Prozessor: 2 GHz, Festplatte: 40 GiB)<br>Threedim Prof (RAM: 16 GiB, Prozessor: 3 GHz, Festplatte: 120 GiB)</p>
         </div>
     </body>
 </html>
