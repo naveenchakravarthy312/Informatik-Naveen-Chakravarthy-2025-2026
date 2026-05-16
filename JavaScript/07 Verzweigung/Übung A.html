@@ -1,10 +1,13 @@
 <!doctype html>
 <html lang="de">
     <head>
+        <!-- Meta -->
         <meta charset="utf-8">
         <title>True/False</title>
         <meta name="author" content="Naveen Chakravarthy Mohankumar">
         <meta name="date" content="11.05.2026">
+
+        <!-- Style -->
         <style>
             .card {
                 background: #357096;
@@ -43,12 +46,18 @@
 
     <body>
         <div class="card">
+
+            <!-- Title -->
             <h1>Geschlecht</h1>
             <script>
                 function Geschlecht() {
+
+                    // Variable
                     var Mann = document.getElementById("mann") .checked;
                     var Frau = document.getElementById("frau") .checked;
                     var Name = document.getElementById("name").value;
+
+                    // if-else
                     if (Mann == true) {
                         document.getElementById("output").innerHTML = "Sehr geehrter Herr " + Name;
                     }
@@ -57,10 +66,14 @@
                     }
                 }
             </script>
+
+            <!-- Input -->
             <input type="radio" id="mann" name="geschlecht">Mann<br>
             <input type="radio" id="frau" name="geschlecht">Frau<br>
             <input type="text" id="name" placeholder="Name?">
             <button onclick= "Geschlecht()">Hochladen</button>
+
+            <!-- Output -->
             <p id="output"></p>
         </div>
     </body>
