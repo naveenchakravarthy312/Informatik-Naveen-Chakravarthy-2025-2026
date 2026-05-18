@@ -13,15 +13,12 @@
             var a = 3
             var b = 5
             var c = 1
-            
-            // Rechnung (Math.pow = Qudrat)
-            var quadrat = Math.pow(b, 2) - 4 * a * c;
 
-            // Lösung (Math.sqrt = Wurzel)
-            var x1 = (-b + Math.sqrt(quadrat)) / (2 * a);
-            var x2 = (-b - Math.sqrt(quadrat)) / (2 * a);
+            // Lösung
+            var x1 = (-b + Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
+            var x2 = (-b - Math.sqrt(Math.pow(b, 2) - 4 * a * c)) / (2 * a);
 
-            // Rundung auf zwei Nachkommastellen (toFixed = Nachkommastellen)
+            // Rundung auf zwei Nachkommastellen
             x1 = x1.toFixed(2);
             x2 = x2.toFixed(2);
 
